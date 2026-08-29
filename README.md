@@ -2,6 +2,9 @@
 
 Um jogo estilo *Frogger*, escrito em Assembly para o processador didático do ICMC-USP (disciplina de Arquitetura de Computadores, sob orientação do Prof. Eduardo do Valle Simões). O jogador atravessa uma avenida cheia de obstáculos para conseguir chegar à aula — e, se demorar demais, pode até ter que voltar atrás para resolver um probleminha com o professor.
 
+Developed by [André Luís](https://github.com/AndreLuismain); [João Vitor](https://github.com/webjotah); [Viniccius Faria](https://github.com/vinicciusfaria); [Yuri Oba](https://github.com/yurioba)
+
+
 ## Arquivos do projeto
 
 | Arquivo | Conteúdo |
@@ -11,7 +14,7 @@ Um jogo estilo *Frogger*, escrito em Assembly para o processador didático do IC
 
 ## A história
 
-Você é um aluno tentando atravessar a avenida para chegar à aula. O caminho passa por três fases temáticas, cada uma mais perigosa que a anterior. Se você chegar até o fim... só que perdeu o chip do professor pelo caminho, e agora o Simões está bravo. Você decide se vai voltar atrás pra procurar o chip ou se vai just deixar pra lá.
+Você é um aluno tentando chegar na aula do Simões. O caminho passa por três fases temáticas, cada uma mais perigosa que a anterior. Se você chegar até o fim sem se atrasar... só que perdeu o chip do professor pelo caminho, e agora o Simões está bravo. Você decide se vai voltar atrás pra procurar o chip ou se vai deixar pra lá.
 
 ## Como jogar
 
@@ -79,3 +82,24 @@ Este projeto foi desenvolvido de forma incremental, sessão após sessão, sobre
 - **Aleatoriedade** (direção da pista extra, posição do chip, tema sorteado) usa um contador que cresce sozinho a cada quadro do jogo como "semente", já que não existe gerador de números aleatórios.
 - **A tecla ESC** é assumida como o código ASCII padrão (27). Se o simulador usado enviar um código diferente para essa tecla, basta ajustar essa constante no código (está comentada no ponto exato onde é usada).
 - Todas as pistas de carro, o corpo do jogador, as janelas de ônibus e outros elementos visuais foram desenhados a partir de glifos 8x8 redefinidos no `charmap.mif` — nenhuma letra usada nos textos do jogo foi sobrescrita por um sprite (isso já rendeu alguns bugs corrigidos ao longo do desenvolvimento).
+
+
+## Como baixar o compilador para programação em Assembly
+
+Precisará usar um simulador para desenvolver e rodar programas em linguagem Assembly que poderá ser encontrado para Windows, Linux e MacOS em: 
+[Processador-ICMC](https://github.com/simoesusp/Processador-ICMC/blob/master/Install_Packages/)
+Para Windows, fiz um link super fácil de instalar: 
+[Link Facilitado para Windows](https://github.com/simoesusp/Processador-ICMC/blob/master/Install_Packages/Simulador_Windows_Tudo_Pronto_F%C3%A1cil%20(1).zip)
+
+Esse zip já vem inclusive com o sublime configurado para escrever o software (incluindo a sintaxe highlight) e o montador e o simulador já configurado para ser chamado com a tecla **F7**
+- Para instalar basta fazer o download na area de trabalho ou na pasta Documentos
+- Entrar na pasta ..\Simulador\Sublime Text 3
+- Executar o sublime: "sublime_text.exe"
+- Se ele pedir, **NÃ0 FAÇA O UPDATE !!!!!!!!!!!!!!!**
+- Vá em File - Open File e volte uma pasta para ..\Simulador\
+- Abra o sw em Assembly chamado Hello4.ASM
+- Teste se está tudo funcionando chamando o MONTADOR e o SIMULADOR com a tecla F7
+- Apartir daí pode-se salvar o sw com outro nome e fazer novos programas
+- Apenas preste atenção para estar na pasta ..\Simulador\
+- Se der o erro: [Decode error - output not utf-8] é porque você não está na pasta ..\Simulador\
+... Ou basta mudar o formato para utf-8 e salvar...
