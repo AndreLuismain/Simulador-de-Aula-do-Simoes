@@ -2,7 +2,7 @@
 
 Um jogo estilo *Frogger*, escrito em Assembly para o processador didático do ICMC-USP (disciplina de Arquitetura de Computadores, sob orientação do Prof. Eduardo do Valle Simões). O jogador atravessa uma avenida cheia de obstáculos para conseguir chegar à aula — e, se demorar demais, pode até ter que voltar atrás para resolver um probleminha com o professor.
 
-Developed by [André Luís](https://github.com/AndreLuismain); [João Vitor](https://github.com/webjotah); [Viniccius Faria](https://github.com/vinicciusfaria); [Yuri Oba](https://github.com/yurioba)
+Developed by [André Luís](https://github.com/AndreLuismain), [Daniel Chaves](https://github.com/Danielo08), [João Vitor](https://github.com/webjotah), [Viniccius Faria](https://github.com/vinicciusfaria), [Yuri Oba](https://github.com/yurioba)
 
 
 ## Arquivos do projeto
@@ -15,6 +15,8 @@ Developed by [André Luís](https://github.com/AndreLuismain); [João Vitor](htt
 ## A história
 
 Você é um aluno tentando chegar na aula do Simões. O caminho passa por três fases temáticas, cada uma mais perigosa que a anterior. Se você chegar até o fim sem se atrasar... só que perdeu o chip do professor pelo caminho, e agora o Simões está bravo. Você decide se vai voltar atrás pra procurar o chip ou se vai deixar pra lá.
+
+Aliás caso não saiba o homenageado é esse professor sensacional [Eduardo do Valle Simoes](https://github.com/simoesusp)
 
 ## Como jogar
 
