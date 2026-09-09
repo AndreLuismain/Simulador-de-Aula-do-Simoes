@@ -4,6 +4,8 @@ Um jogo estilo *Frogger*, escrito em Assembly para o processador didático do IC
 
 Developed by [André Luís](https://github.com/AndreLuismain), [Daniel Chaves](https://github.com/Danielo08), [João Vitor](https://github.com/webjotah), [Viniccius Faria](https://github.com/vinicciusfaria), [Yuri Oba](https://github.com/yurioba)
 
+Vídeo Explicativo: [Link](add o drive aqui)
+
 
 ## Arquivos do projeto
 
