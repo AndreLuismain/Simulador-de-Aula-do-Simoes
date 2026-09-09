@@ -11,6 +11,9 @@ Developed by [André Luís](https://github.com/AndreLuismain), [Daniel Chaves](h
 |---|---|
 | `JOGO.asm` | Todo o código-fonte em Assembly do processador ICMC |
 | `charmap.mif` | Fonte de caracteres 8x8 (bitmap) usada para desenhar todos os sprites do jogo |
+| `documentacao+jogo` | Documentação técnica do jogo explicando cada função |
+| `Simple_simulator_template` | Template do simulador feito em aula |
+| `JOGO.mif` | Necessário para criar o .exe com o Simple Simulator |
 
 ## A história
 
@@ -87,6 +90,8 @@ Este projeto foi desenvolvido de forma incremental, sessão após sessão, sobre
 
 
 ## Como baixar o compilador para programação em Assembly
+
+> **Nota técnica 2:** Caso queira apenas baixar e rodar de forma rápida apenas baixe a pasta Simulador e siga as intruções abaixo.
 
 Precisará usar um simulador para desenvolver e rodar programas em linguagem Assembly que poderá ser encontrado para Windows, Linux e MacOS em: 
 [Processador-ICMC](https://github.com/simoesusp/Processador-ICMC/blob/master/Install_Packages/)
