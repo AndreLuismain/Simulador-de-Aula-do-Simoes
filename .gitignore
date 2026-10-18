@@ -1,0 +1,13 @@
+# C/C++ Build Artifacts
+*.o
+*.obj
+*.out
+simulador_local
+simulador_local.exe
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

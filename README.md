@@ -7,15 +7,22 @@ Developed by [André Luís](https://github.com/AndreLuismain), [Daniel Chaves](h
 Vídeo Explicativo: [Link](add o drive aqui)
 
 
-## Arquivos do projeto
+## 🧭 Índice de Navegação de Arquivos e Subpastas
 
-| Arquivo | Conteúdo |
-|---|---|
-| `JOGO.asm` | Todo o código-fonte em Assembly do processador ICMC |
-| `charmap.mif` | Fonte de caracteres 8x8 (bitmap) usada para desenhar todos os sprites do jogo |
-| `documentacao+jogo` | Documentação técnica do jogo explicando cada função |
-| `Simple_simulator_template` | Template do simulador feito em aula |
-| `JOGO.mif` | Necessário para criar o .exe com o Simple Simulator |
+| Arquivo / Diretório | Linguagem / Formato | Resumo Técnico e Conceitos Abordados |
+|---|---|---|
+| **[`JOGO.asm`](./JOGO.asm)** | Assembly ICMC (16-bit) | Código-fonte completo do jogo (**3.027 linhas**). Implementa *game loop* em baixo nível, renderização em memória de vídeo ($40 \times 30$), gerador pseudo-aleatório por semente de quadros (`rng_seed`), conversão binário-decimal por subtração sucessiva e detecção de colisão por coordenadas. |
+| **[`documentacao_jogo.md`](./documentacao_jogo.md)** | Markdown | Especificação técnica detalhada do `JOGO.asm`, documentando o fluxo do `LOOP_PRINCIPAL` e o dicionário completo de todas as subrotinas de vídeo, física, cronômetro e estados de tela. |
+| **[`simple_simulator_template.c`](./simple_simulator_template.c)** | C (ANSI / GCC) | Implementação em C (**1.020 linhas**) do ciclo de instrução da CPU ICMC (`STATE_RESET`, `STATE_FETCH`, `STATE_DECODE`, `STATE_EXECUTE`, `STATE_HALTED`), multiplexadores (`Mux1`–`Mux6`), ULA e extensão da ISA com novos *opcodes* (`MAIOR` = `38`, `MENOR` = `39`). |
+| **[`charmap.mif`](./charmap.mif)** | Memory Initialization File | Memória de caracteres bitmap $8 \times 8$ customizada para desenhar os sprites de veículos, jogador animado, corações de vida e cenário do campus sem sobrescrever glifos alfanuméricos. |
+| **[`JOGO.mif`](./JOGO.mif)** | Memory Initialization File | Imagem binária montada da ROM de programa ($32\text{K} \times 16\text{ bits}$) pronta para carregamento direto no simulador. |
+| **[`Simulador/`](./Simulador/)** | C++ / Assembly / Binários | Ambiente completo de montagem (`montador.exe`) e execução (`simulador.exe`), incluindo manuais da arquitetura ([`Manual/`](./Simulador/Versao_05_2013/Manual/)), exemplos básicos ([`Exemplos/`](./Simulador/Versao_05_2013/Exemplos/)) e o código-fonte C++ MVC do simulador ([`simulador_fonte/`](./Simulador/Versao_05_2013/simulador_fonte/)). |
+
+### Compilando o Simulador em C (`simple_simulator_template.c`)
+Para compilar o emulador de linha de comando escrito em C utilizando **GCC**:
+```bash
+gcc simple_simulator_template.c -O3 -march=native -o simulador_local -Wall -lm
+```
 
 ## A história
 
