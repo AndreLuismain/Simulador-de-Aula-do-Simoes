@@ -4,7 +4,7 @@ Este diretório contém o código-fonte em **C++** com interface gráfica **GTK+
 
 ---
 
-## 🗂️ Mapeamento dos Arquivos-Fonte
+## Mapeamento dos Arquivos-Fonte
 
 | Arquivo | Camada MVC | Responsabilidade Técnica |
 |---|---|---|
@@ -17,7 +17,7 @@ Este diretório contém o código-fonte em **C++** com interface gráfica **GTK+
 
 ---
 
-## 🛠️ Como Compilar
+## Como Compilar
 
 Em ambiente Linux (com `libgtk2.0-dev` instalado):
 ```bash

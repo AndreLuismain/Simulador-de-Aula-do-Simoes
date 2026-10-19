@@ -4,7 +4,7 @@ Coleção de programas didáticos escritos na linguagem **Assembly do Processado
 
 ---
 
-## 📋 Catálogo de Códigos-Fonte
+## Catálogo de Códigos-Fonte
 
 | Arquivo | Objetivo do Algoritmo | Conceitos de Arquitetura Aplicados |
 |---|---|---|
@@ -20,7 +20,7 @@ Coleção de programas didáticos escritos na linguagem **Assembly do Processado
 
 ---
 
-## 🚀 Como Compilar (Montar) e Executar Qualquer Exemplo
+## Como Compilar (Montar) e Executar Qualquer Exemplo
 
 A partir da pasta `Simulador/`:
 

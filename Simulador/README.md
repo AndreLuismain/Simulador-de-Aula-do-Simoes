@@ -4,7 +4,7 @@ Este diretório contém o pacote de ferramentas de montagem (`montador.exe`) e s
 
 ---
 
-## 🧭 Índice de Subpastas e Artefatos
+## Índice de Subpastas e Artefatos
 
 | Caminho | Descrição Técnica |
 |---|---|
@@ -17,7 +17,7 @@ Este diretório contém o pacote de ferramentas de montagem (`montador.exe`) e s
 
 ---
 
-## 🚀 Como Montar e Executar um Programa `.asm` via Linha de Comando
+## Como Montar e Executar um Programa `.asm` via Linha de Comando
 
 No terminal, a partir deste diretório (`Simulador/`):
 

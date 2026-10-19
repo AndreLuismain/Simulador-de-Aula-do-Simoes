@@ -6,8 +6,7 @@ Developed by [André Luís](https://github.com/AndreLuismain), [Daniel Chaves](h
 
 Vídeo Explicativo: [Link](add o drive aqui)
 
-
-## 🧭 Índice de Navegação de Arquivos e Subpastas
+## Índice de Navegação de Arquivos e Subpastas
 
 | Arquivo / Diretório | Linguagem / Formato | Resumo Técnico e Conceitos Abordados |
 |---|---|---|
@@ -96,7 +95,6 @@ Este projeto foi desenvolvido de forma incremental, sessão após sessão, sobre
 - **Aleatoriedade** (direção da pista extra, posição do chip, tema sorteado) usa um contador que cresce sozinho a cada quadro do jogo como "semente", já que não existe gerador de números aleatórios.
 - **A tecla ESC** é assumida como o código ASCII padrão (27). Se o simulador usado enviar um código diferente para essa tecla, basta ajustar essa constante no código (está comentada no ponto exato onde é usada).
 - Todas as pistas de carro, o corpo do jogador, as janelas de ônibus e outros elementos visuais foram desenhados a partir de glifos 8x8 redefinidos no `charmap.mif` — nenhuma letra usada nos textos do jogo foi sobrescrita por um sprite (isso já rendeu alguns bugs corrigidos ao longo do desenvolvimento).
-
 
 ## Como baixar o compilador para programação em Assembly
 
