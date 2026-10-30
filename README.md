@@ -6,16 +6,41 @@ Developed by [André Luís](https://github.com/AndreLuismain), [Daniel Chaves](h
 
 Vídeo Explicativo: [Link](add o drive aqui)
 
+## Prévia Visual do Jogo
+
+### Menu Inicial Estilo Arcade (`LOBBY`, `COMO JOGAR`, `CREDITOS`)
+
+| Menu Principal (Jogar) | Guia Visual (Como Jogar) | Tela de Créditos |
+|:---:|:---:|:---:|
+| ![Menu Inicial Arcade](./assets/screenshots/menu_arcade.png) | ![Tela Como Jogar](./assets/screenshots/como_jogar.png) | ![Tela de Créditos](./assets/screenshots/creditos.png) |
+
+### As 3 Fases Temáticas e Cenários do Campus
+
+| Fase 1 — USP (Avenida) | Fase 2 — ICMC (Entrada + 9ª Pista) | Fase 3 — Pátio do Simões |
+|:---:|:---:|:---:|
+| ![Fase 1 USP](./assets/screenshots/fase1_usp.png) | ![Fase 2 ICMC](./assets/screenshots/fase2_icmc.png) | ![Fase 3 Simões](./assets/screenshots/fase3_simoes.png) |
+
+### Check-in, Modo Reverso (Caça ao Chip) e Telas Finais
+
+| Check-in entre Fases | Evento: Simões Bravo | Busca pelo Chip (Modo Reverso) |
+|:---:|:---:|:---:|
+| ![Check-in de Fase](./assets/screenshots/checkin.png) | ![Simões Bravo](./assets/screenshots/simoes_bravo.png) | ![Modo Reverso](./assets/screenshots/modo_reverso.png) |
+
+| Vitória Definitiva (Chip Entregue) | Tela de Game Over |
+|:---:|:---:|
+| ![Vitória no Modo Reverso](./assets/screenshots/vitoria_reverso.png) | ![Tela de Game Over](./assets/screenshots/game_over.png) |
+
 ## Índice de Navegação de Arquivos e Subpastas
 
 | Arquivo / Diretório | Linguagem / Formato | Resumo Técnico e Conceitos Abordados |
 |---|---|---|
-| **[`JOGO.asm`](./JOGO.asm)** | Assembly ICMC (16-bit) | Código-fonte completo do jogo (**3.027 linhas**). Implementa *game loop* em baixo nível, renderização em memória de vídeo ($40 \times 30$), gerador pseudo-aleatório por semente de quadros (`rng_seed`), conversão binário-decimal por subtração sucessiva e detecção de colisão por coordenadas. |
+| **[`JOGO.asm`](./JOGO.asm)** | Assembly ICMC (16-bit) | Código-fonte completo do jogo (**4.901 linhas**). Implementa menu estilo Arcade animado, *game loop* em baixo nível, renderização em memória de vídeo ($40 \times 30$), gerador pseudo-aleatório por semente de quadros (`rng_seed`), conversão binário-decimal por subtração sucessiva e detecção de colisão por coordenadas. |
 | **[`documentacao_jogo.md`](./documentacao_jogo.md)** | Markdown | Especificação técnica detalhada do `JOGO.asm`, documentando o fluxo do `LOOP_PRINCIPAL` e o dicionário completo de todas as subrotinas de vídeo, física, cronômetro e estados de tela. |
 | **[`simple_simulator_template.c`](./simple_simulator_template.c)** | C (ANSI / GCC) | Implementação em C (**1.020 linhas**) do ciclo de instrução da CPU ICMC (`STATE_RESET`, `STATE_FETCH`, `STATE_DECODE`, `STATE_EXECUTE`, `STATE_HALTED`), multiplexadores (`Mux1`–`Mux6`), ULA e extensão da ISA com novos *opcodes* (`MAIOR` = `38`, `MENOR` = `39`). |
-| **[`charmap.mif`](./charmap.mif)** | Memory Initialization File | Memória de caracteres bitmap $8 \times 8$ customizada para desenhar os sprites de veículos, jogador animado, corações de vida e cenário do campus sem sobrescrever glifos alfanuméricos. |
+| **[`charmap.mif`](./charmap.mif)** | Memory Initialization File | Memória de caracteres bitmap $8 \times 8$ customizada para desenhar molduras *arcade*, botões, ícones de HUD, veículos, jogador animado e cenário do campus sem sobrescrever glifos alfanuméricos. |
 | **[`JOGO.mif`](./JOGO.mif)** | Memory Initialization File | Imagem binária montada da ROM de programa ($32\text{K} \times 16\text{ bits}$) pronta para carregamento direto no simulador. |
 | **[`Simulador/`](./Simulador/)** | C++ / Assembly / Binários | Ambiente completo de montagem (`montador.exe`) e execução (`simulador.exe`), incluindo manuais da arquitetura ([`Manual/`](./Simulador/Versao_05_2013/Manual/)), exemplos básicos ([`Exemplos/`](./Simulador/Versao_05_2013/Exemplos/)) e o código-fonte C++ MVC do simulador ([`simulador_fonte/`](./Simulador/Versao_05_2013/simulador_fonte/)). |
+| **[`assets/screenshots/`](./assets/screenshots/)** | PNG ($640 \times 480$) | Capturas de tela *pixel-perfect* renderizadas diretamente a partir da memória de vídeo ($40 \times 30$) com `JOGO.mif` e `charmap.mif`. |
 
 ### Compilando o Simulador em C (`simple_simulator_template.c`)
 Para compilar o emulador de linha de comando escrito em C utilizando **GCC**:
@@ -31,14 +56,12 @@ Aliás caso não saiba o homenageado é esse professor sensacional [Eduardo do V
 
 ## Como jogar
 
-**Controles (WASD):**
-- `W` — anda para cima (em direção ao objetivo, na maior parte do jogo)
-- `S` — anda para baixo
-- `A` — anda para a esquerda
-- `D` — anda para a direita
-- Qualquer tecla — avança em telas de espera (lobby, mensagens)
-- `C` / `M` — nas telas de check-in, continuar ou "morcegar" (desistir da tentativa)
-- `S` / `ESC` — na tela final, voltar procurando o chip ou ignorar
+**Controles (WASD e Menu Arcade):**
+- `W` / `S` — navega entre os botões da tela inicial (`JOGAR`, `COMO JOGAR`, `CREDITOS`) e anda para cima / baixo durante o jogo
+- `ENTER` / `ESPAÇO` (ou atalhos `1`, `2`, `3`) — seleciona a opção marcada no menu inicial ou volta das telas de ajuda/créditos
+- `A` / `D` — anda para a esquerda / direita durante a partida
+- `C` / `M` — nas telas de check-in, continuar ou "morcegar" (desistir da tentativa e voltar ao menu)
+- `S` / `N` (ou `ESC`) — na tela final, voltar procurando o chip ou ignorar e voltar ao menu
 
 **Objetivo:** atravessar a avenida (de baixo pra cima) sem ser atropelado, evitando os obstáculos de cada pista, até chegar à linha de chegada no topo da tela.
 
@@ -81,11 +104,14 @@ Ao vencer a fase 1 ou a fase 2, o jogo pergunta se você quer **continuar** (`C`
 Ao vencer a fase 3, o jogo revela que você perdeu o chip do Professor Simões pelo caminho. Você escolhe:
 
 - **`S` — voltar procurando:** o jogo entra em modo reverso. Você recomeça na linha de chegada e precisa voltar pelas 3 fases na ordem contrária (SIMOES → ICMC → USP). Em algum ponto do caminho, um pequeno chip colecionável aparece em uma posição aleatória do mapa (pode estar em qualquer pista, no passeio, na grama ou na linha de chegada), sinalizado por uma placa piscante "CHIP DO SIMOES ->". Ao encontrá-lo, o objetivo muda: agora você precisa voltar até a linha de chegada para entregá-lo ao professor. Conseguir isso mostra a tela de conclusão "o Simões está em paz".
-- **`ESC` — ignorar:** encerra o ciclo por ali mesmo e volta para o lobby.
+- **`N` (ou `ESC`) — ignorar:** encerra o ciclo por ali mesmo e volta para o menu inicial.
 
-## Lobby
+## Tela Inicial Arcade (Lobby)
 
-Tela inicial com o nome do jogo. Mostra também o progresso (X/3 fases vencidas) se você tiver voltado de um "morcegar" antes. Qualquer tecla começa uma nova partida do zero.
+Tela de abertura estilo gabinete *arcade*, com moldura dupla, letreiro dourado, mini-avenida animada com veículos em movimento, marcador de **Recorde da sessão** e progresso (`X/3` fases vencidas caso tenha voltado de um "morcegar"). Conta com três botões interativos selecionáveis com `W`/`S` + `ENTER`/`ESPAÇO` (ou teclas `1`, `2`, `3`):
+- **JOGAR:** inicia uma nova partida do zero.
+- **COMO JOGAR:** exibe o guia visual com controles, mini-sprites das 3 fases, regras de pontuação e explicação do modo reverso.
+- **CREDITOS:** apresenta os desenvolvedores do projeto e a homenagem ao Prof. Eduardo do Valle Simões.
 
 ## Notas técnicas e suposições assumidas
 
